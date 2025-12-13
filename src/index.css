@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Elms+Sans:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,7 +11,8 @@
   }
 
   body {
-    @apply min-h-screen text-gray-100 font-sans antialiased 
+    font-family: "Elms Sans", sans-serif;
+    @apply min-h-screen text-gray-100 antialiased
            bg-gradient-to-r from-[#3F5EFB] to-[#FC466B];
   }
 
@@ -27,5 +30,9 @@
 
   p {
     @apply text-gray-300 leading-relaxed;
+  }
+
+  a {
+    @apply no-underline text-white;
   }
 }
