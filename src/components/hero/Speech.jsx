@@ -1,10 +1,14 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
+import { motion } from "motion/react";
 
 const Speech = () => {
   return (
-    <div className="flex flex-row-reverse items-end gap-5 scale-100 md:scale-110">
-      
+    <motion.div
+      animate={{ opacity: [0, 1] }}
+      transition={{ duration: 1 }}
+      className="flex flex-row-reverse items-end gap-5 scale-100 md:scale-110"
+    >
       {/* Avatar */}
       <img
         src="/man.png"
@@ -54,8 +58,7 @@ const Speech = () => {
           "
         />
       </div>
-
-    </div>
+    </motion.div>
   );
 };
 
