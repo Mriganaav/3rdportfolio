@@ -10,7 +10,7 @@ const App = () => {
         <section className="h-dvh relative snap-center">
           <Hero />
         </section>
-        <section className="h-dvh  border snap-center">
+        <section className="h-dvh   snap-center">
           <Projects />
         </section>
         <section className="h-dvh  border snap-center">

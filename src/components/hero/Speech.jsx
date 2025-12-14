@@ -18,8 +18,7 @@ const Speech = () => {
           md:w-12 md:h-12
           rounded-full
           object-cover
-          shadow-lg border border-[#3F5EFB] mr-10
-        "
+          shadow-lg border border-[#3F5EFB] mr-10 bg-white "
       />
 
       {/* Speech bubble */}
