@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from "./components/hero/Hero";
+import Hero from "./components/hero/Hero"
 import Projects from "./components/projects/Projects";
 import Certificates from "./components/certificates/Certificates";
 import Contact from "./components/contact/Contact";
