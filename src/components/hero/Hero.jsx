@@ -1,5 +1,10 @@
 import Speech from "./Speech";
 import { motion } from "motion/react";
+import Shape from "./Shape";
+import { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
+import Lottie from "lottie-react";
+import avatarAnim from "./utils/HamsterWheelLoading.json";
 
 const Education = {
   initial: { x: -100, opacity: 0 },
@@ -21,9 +26,17 @@ const socialMedia = {
 
 const Hero = () => {
   return (
-    <div className="relative flex flex-col lg:flex-row min-h-dvh overflow-hidden px-6 lg:px-16">
+    <div
+      className=" relative
+  flex flex-col lg:flex-row
+  items-center lg:justify-between
+  min-h-screen
+  overflow-hidden
+  px-4 lg:px-5
+   mx-auto"
+    >
       {/* LEFT */}
-      <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start justify-center gap-8 text-center lg:text-left">
+      <div className="w-full lg:w-1/3 flex flex-col items-center lg:items-start  lg:justify-center justify-start gap-8 text-center lg:text-left relative z-10">
         <motion.h1
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -77,7 +90,7 @@ const Hero = () => {
       </div>
 
       {/* RIGHT */}
-      <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-end justify-center gap-8 mt-10 lg:mt-0">
+      <div className="w-full lg:w-1/3 flex flex-col items-center lg:items-end justify-center gap-8 mt-10 lg:mt-0 relative z-10">
         {/* Socials */}
         <motion.div
           variants={socialMedia}
@@ -141,27 +154,32 @@ const Hero = () => {
         </motion.a>
       </div>
 
-      {/* IMAGE */}
       <div
         className="
     pointer-events-none
     absolute
-    inset-0
-    flex
-    justify-center
-    items-end
-    -z-10
+    left-1/2 bottom-0
+    -translate-x-1/2
+    flex items-end justify-center
+    z-0
+    w-[350px] md:w-[500px] lg:w-[750px]
+    h-[60vh] lg:h-[100vh]
   "
       >
-        <img
-          src="/me.png"
-          alt="myself"
-          className="
-       h-[40vh]
-    md:h-[50vh]
-    lg:h-[65vh]
-    object-contain
-    "
+        {/* SHAPE */}
+        <div className="absolute inset-0 -z-10">
+          <Canvas>
+            <Suspense fallback={null}>
+              <Shape />
+            </Suspense>
+          </Canvas>
+        </div>
+
+        <Lottie
+          animationData={avatarAnim}
+          loop
+          autoplay
+          className="w-full h-full"
         />
       </div>
     </div>

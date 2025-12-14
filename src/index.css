@@ -13,7 +13,7 @@
   body {
     font-family: "Elms Sans", sans-serif;
     @apply min-h-screen text-gray-100 antialiased
-           bg-gradient-to-r from-[#3F5EFB] to-[#FC466B];
+           bg-gradient-to-r from-[#1a002b] to-[#000000];
   }
 
   h1 {

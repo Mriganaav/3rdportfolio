@@ -11,7 +11,7 @@ const Speech = () => {
     >
       {/* Avatar */}
       <img
-        src="/man.png"
+        src="/me.png"
         alt="man"
         className="
           w-8 h-8
