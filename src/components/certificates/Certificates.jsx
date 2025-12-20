@@ -100,7 +100,7 @@ export default function Certificates() {
                   </div>
 
                   <a href={item.link} className="mt-6">
-                    <button className="w-full bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 px-4 rounded-xl transition-colors">
+                    <button className="w-full  bg-gradient-to-r from-[#FC466B] to-[#3F5EFB] hover:ease-out text-white font-semibold py-3 px-4 rounded-xl transition-colors">
                       View Certificate
                     </button>
                   </a>
